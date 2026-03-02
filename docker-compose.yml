@@ -2,10 +2,11 @@ services:
   bank-app:
     build: .
     ports:
-      - "5000:5000"
+      - "5000:5000"  # Maps your Mac to the Container
     networks:
-      - nsongwa-secure-net
+      - nsongwa-net
+    restart: always
 
 networks:
-  nsongwa-secure-net:
-    internal: true # Zero-Trust: Database/Internal API isolation
+  nsongwa-net:
+    driver: bridge
