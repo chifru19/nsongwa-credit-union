@@ -38,7 +38,7 @@ DASHBOARD_HTML = '''
 <body style="font-family: sans-serif; background: #f0f2f5;">
     <div style="max-width: 600px; margin: 30px auto; background: white; padding: 40px; border-radius: 10px; border-top: 10px solid #28a745; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
         <div style="display: flex; justify-content: space-between; align-items: center;">
-            <h2>Welcome, {{ name }}!</h2>
+            <h2>🏦 Nsongwa Credit Union <br> <small>Welcome, {{ name }}!</small></h2>
             <span style="background: #d4edda; color: #155724; padding: 5px 10px; border-radius: 15px; font-size: 0.8em;">ID: {{ uid }}</span>
         </div>
         <hr style="border: 0; border-top: 1px solid #eee;">
