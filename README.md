@@ -1,29 +1,29 @@
-# 🏦 Nsongwa Bank: Secure Financial Gateway
+# 🏦 Nsongwa Bank: Secure Financial Gateway v2.0
+
 **Status:** 🟢 Operational | **Security Audit:** ✅ Passed (Checkov v3.2.506)
+**Core Engine:** Dockerized Python/Flask with MoMo Integration
 
-This repository contains the containerized core banking engine for Nsongwa Credit Union. It is built using a **Security-First** approach to protect member data and ensure 24/7 service availability.
+---
 
-## 🛡️ Security & Compliance Features
-* **Least Privilege Execution**: The application runs as a dedicated `bankuser` (non-root) to prevent system-wide breaches.
-* **Infrastructure-as-Code Auditing**: Every deployment is scanned by **Checkov** to ensure compliance with financial security standards.
-* **Automated Health Monitoring**: Built-in `HEALTHCHECK` protocols monitor the application heartbeat every 30 seconds.
-* **Network Isolation**: Secure internal bridging prevents unauthorized external access to the banking API.
+## 🚀 Executive Summary
+This repository contains the hardened core banking prototype for **Nsongwa Credit Union**. It transitions traditional manual ledgering into a secure, digital-first environment capable of handling real-time member transactions.
 
-## 🚀 Deployment Instructions
-To launch the secure environment locally for a Board demonstration:
+## 🔐 Advanced Security Features
+* **Cryptographic Identity**: Member PINs are never stored in plain text; we use **SHA-256 Hashing** to ensure data privacy.
+* **Non-Root Execution**: The application runs under a restricted `bankuser` profile within Docker to prevent system-level breaches.
+* **Infrastructure-as-Code Auditing**: Scanned by **Checkov** to meet international financial security standards.
+* **Session Management**: Secure server-side sessions protect members from unauthorized account access during active use.
 
-1.  **Build and Start**:
-    ```bash
-    docker-compose up --build
-    ```
-2.  **Verify Service**:
-    Access the Member Balance API at: `http://localhost:5000/api/v1/balance`.
+## 📱 Integrated Services (Phase 1)
+* **Member Portal**: Secure login and real-time balance inquiry.
+* **Mobile Money (MoMo) Gateway**: Instant deposit functionality from mobile wallets (MTN/Orange simulation).
+* **Live Audit Ledger**: Real-time transaction history tracking for financial transparency.
 
-## 📊 Technical Stack
-* **Language**: Python 3.9-slim (Hardened Base Image)
-* **Orchestration**: Docker Compose
-* **Security Scanner**: Checkov
-* **CI/CD**: GitHub Actions
+## 🛠️ Technical Stack
+* **Language**: Python 3.9-slim (Hardened Base Image).
+* **Orchestration**: Docker Compose for "Self-Healing" service availability.
+* **Security Scanner**: Bridgecrew Checkov.
+* **Database**: PostgreSQL (Production Ready).
 
 ---
 *© 2026 Nsongwa Credit Union Digital Transformation Project*
