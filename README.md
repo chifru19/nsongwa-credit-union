@@ -27,3 +27,30 @@ This repository contains the hardened core banking prototype for **Nsongwa Credi
 
 ---
 *© 2026 Nsongwa Credit Union Digital Transformation Project*
+Nsongwa Credit Union - Secure Banking Portal
+A professional-grade Flask banking application focused on security and real-time transaction processing.
+
+🛡️ Security Implementation
+This project uses industry-standard security patterns to protect customer data:
+
+Environment Secret Management: We use os.getenv for the app.secret_key to keep sensitive encryption keys out of the source code.
+
+Fail-Safe Configuration: Line 6 includes a fallback string to prevent "Internal Server Errors" if the environment file is missing.
+
+Cryptographic PIN Hashing: User PINs are stored as SHA-256 hashes. Even if the database is accessed, the actual PINs remain unreadable.
+
+Session Isolation: Each login creates a unique, encrypted session that must be active to view the dashboard.
+
+💻 Tech Stack
+Backend: Python 3 with Flask.
+
+Environment: Isolated venv (Virtual Environment) for secure dependency management.
+
+Frontend: HTML/CSS with dynamic Jinja2 templating.
+
+🚀 How to Run the Demo
+Activate the Environment: source venv/bin/activate.
+
+Start the Server: python3 app.py.
+
+Access the Portal: Open http://127.0.0.1:5000.

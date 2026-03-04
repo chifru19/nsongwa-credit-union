@@ -1,8 +1,9 @@
+import os
 from flask import Flask, render_template_string, request, session, redirect, url_for
 import hashlib  # This line fixes the error in your screenshot!
 
 app = Flask(__name__)
-app.secret_key = 'nsongwa_secure_gateway_2026' 
+app.secret_key = os.getenv("FLASK_SECRET_KEY", "nsongwa_secure_gateway_2026")
 
 # --- SECURE MEMBER DATABASE ---
 members = {
