@@ -55,3 +55,15 @@ Start the Server: python3 app.py.
 
 Access the Portal: Open http://127.0.0.1:5000.
 ![Nsongwa Bank Dashboard](assets/dashboard.png)
+🚀 Future Roadmap (v3.0 & Beyond)
+To transform this prototype into a production-ready financial suite, the following modules are planned:
+
+🗄️ Database Migration: Transitioning from volatile in-memory storage to a persistent PostgreSQL database for transaction history.
+
+🔐 Multi-Factor Authentication (MFA): Adding SMS/Email OTP verification for all MoMo deposits to enhance member security.
+
+📊 Financial Analytics Dashboard: Implementing Chart.js to provide members with visual spending and savings trends.
+
+☁️ Cloud Deployment: Using GitHub Actions to automate deployments to AWS or Azure within a hardened Docker container.
+
+🧾 Automated E-Receipts: Generating PDF transaction summaries for every successful deposit.
