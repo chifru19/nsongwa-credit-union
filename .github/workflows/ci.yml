@@ -2,16 +2,24 @@ name: Bank App Safety Check
 
 on: [push]
 
+# This clears the Checkov warning by limiting the robot's powers
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+
       - name: Install Flask
         run: pip install flask flask-sqlalchemy
+
       - name: Check for Syntax Errors
         run: python -m py_compile app.py
